@@ -16,16 +16,21 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 
 @Composable
-fun NavigationText(infoText: String, navigationText: String) {
+fun NavigationText(
+    infoText: String,
+    navigationText: String,
+    onClick: ()-> Unit
+) {
     val annotatedText = buildAnnotatedString {
         withStyle(
             style = SpanStyle(
                 color = Color(parseColor("#858585")),
                 fontWeight = FontWeight.Normal,
                 fontSize = 12.sp,
-                fontStyle = MaterialTheme.typography.body1.fontStyle
+                fontStyle = MaterialTheme.typography.subtitle1.fontStyle
             )
         ) {
             append(infoText)
@@ -43,7 +48,7 @@ fun NavigationText(infoText: String, navigationText: String) {
                 color = Color(parseColor("#0085FF")),
                 fontWeight = FontWeight.Bold,
                 fontSize = 12.sp,
-                fontStyle = MaterialTheme.typography.body1.fontStyle
+                fontStyle = MaterialTheme.typography.subtitle1.fontStyle
             )
         ) {
             append(navigationText)
@@ -71,8 +76,7 @@ fun NavigationText(infoText: String, navigationText: String) {
                 end = offset
             )
                 .firstOrNull()?.let { annotation ->
-                    // If yes, we log its value
-
+                    onClick()
                 }
         }
     )

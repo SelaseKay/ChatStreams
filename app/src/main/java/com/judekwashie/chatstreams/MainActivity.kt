@@ -10,7 +10,11 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import com.judekwashie.chatstreams.ui.ChatStreamsNavGraph
+import com.judekwashie.chatstreams.ui.MainDestinations
 import com.judekwashie.chatstreams.ui.screens.SignInScreen
+import com.judekwashie.chatstreams.ui.screens.SignUpScreen
 import com.judekwashie.chatstreams.ui.theme.ChatStreamsTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,7 +24,11 @@ class MainActivity : ComponentActivity() {
             ChatStreamsTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(),color = MaterialTheme.colors.background) {
-                    SignInScreen()
+                    val navController = rememberNavController()
+                    ChatStreamsNavGraph(
+                        navController = navController,
+                        startDestination = MainDestinations.SIGN_IN_ROUTE
+                    )
                 }
             }
         }
@@ -28,11 +36,22 @@ class MainActivity : ComponentActivity() {
 
     @Preview
     @Composable
-    fun ComposablePreview(){
+    fun SignInPreview(){
         ChatStreamsTheme {
             // A surface container using the 'background' color from the theme
             Surface(modifier = Modifier.fillMaxSize(),color = MaterialTheme.colors.background) {
                 SignInScreen()
+            }
+        }
+    }
+
+    @Preview
+    @Composable
+    fun SignUpPreview(){
+        ChatStreamsTheme {
+            // A surface container using the 'background' color from the theme
+            Surface(modifier = Modifier.fillMaxSize(),color = MaterialTheme.colors.background) {
+                SignUpScreen()
             }
         }
     }

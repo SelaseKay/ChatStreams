@@ -12,6 +12,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
@@ -32,7 +33,8 @@ fun CustomTextField(
     TextField(
         value = text,
         onValueChange = { text = it },
-        modifier = Modifier.padding(start = 32.dp, end = 32.dp, top = marginTop)
+        modifier = Modifier
+            .padding(start = 32.dp, end = 32.dp, top = marginTop)
             .fillMaxWidth(),
         placeholder = {
             Text(

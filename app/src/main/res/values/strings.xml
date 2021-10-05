@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">ChatStreams</string>
-    <string name="welcome_to_chat_streams">Welcome to chatStreams</string>
+    <string name="welcome_to">WELCOME TO\n</string>
+    <string name ="chat">chat</string>
+    <string name ="streams">STREAMS</string>
+    <string name ="username">Username</string>
+    <string name ="email">Email</string>
+    <string name ="password">Password</string>
+    <string name ="sign_in">SignIn</string>
+    <string name ="sign_up">SignUp</string>
+    <string name ="dont_have_acc">Don\'t have an account?\ </string>
+    <string name ="already_have_acc">Already have an account?\ </string>
 </resources>
