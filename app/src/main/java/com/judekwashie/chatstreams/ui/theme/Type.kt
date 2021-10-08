@@ -40,20 +40,15 @@ val Typography = Typography(
         fontSize = 24.sp
     ),
 
+    h2 = TextStyle(
+        fontFamily = fonts,
+        fontWeight = FontWeight.Bold,
+        fontSize = 20.sp
+    ),
 
-
-
-
-    /* Other default text styles to override
-    button = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.W500,
+    caption = TextStyle(
+        fontFamily = fonts,
+        fontWeight = FontWeight.Light,
         fontSize = 14.sp
     ),
-    caption = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 12.sp
-    )
-    */
 )

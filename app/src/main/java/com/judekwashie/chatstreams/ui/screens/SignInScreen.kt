@@ -45,7 +45,9 @@ fun SignInScreen(navController: NavController? = null) {
         CustomButton(
             buttonText = stringResource(id = R.string.sign_in),
             onClick = {
-
+                navController?.navigate(MainDestinations.CHAT_ROUTE){
+                    popUpTo(MainDestinations.SIGN_IN_ROUTE){inclusive = true}
+                }
             }
         )
 
