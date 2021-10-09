@@ -45,7 +45,7 @@ private fun ChatAppBar() {
                 color = Color.White
             )
         },
-        elevation = 0.dp
+        elevation = 3.dp
     )
 }
 
@@ -102,7 +102,10 @@ private fun MessageTextField(modifier: Modifier) {
             decorationBox = { innerTextField ->
                 Row(
                     Modifier
-                        .background(Color.LightGray, RoundedCornerShape(32.dp))
+                        .background(
+                            Color(0xffEAEAEA),
+                            RoundedCornerShape(32.dp)
+                        )
                         .padding(16.dp)
                 ) {
                     innerTextField()
@@ -127,7 +130,7 @@ private fun MessageTextField(modifier: Modifier) {
 
 
 @Composable
-private fun SendButton(modifier: Modifier) {
+private fun SendButton() {
     FloatingActionButton(
         modifier = Modifier
             .size(48.dp),
@@ -147,6 +150,7 @@ private fun SendButton(modifier: Modifier) {
 private fun MessageComponent(modifier: Modifier) {
     Row(
         modifier = modifier,
+        verticalAlignment = Alignment.Bottom
     ) {
 
         MessageTextField(
@@ -158,11 +162,7 @@ private fun MessageComponent(modifier: Modifier) {
 
         Spacer(modifier = Modifier.width(8.dp))
 
-        SendButton(
-            modifier = Modifier
-                .size(48.dp)
-                .weight(0.2f),
-        )
+        SendButton()
 
 
     }
