@@ -1,4 +1,4 @@
-package com.judekwashie.chatstreams.ui.screens.components
+package com.judekwashie.chatstreams.ui.components
 
 import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material.MaterialTheme

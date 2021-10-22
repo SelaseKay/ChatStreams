@@ -1,4 +1,4 @@
-package com.judekwashie.chatstreams.ui.screens
+package com.judekwashie.chatstreams.ui
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -17,10 +17,10 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.judekwashie.chatstreams.R
 import com.judekwashie.chatstreams.ui.MainDestinations
-import com.judekwashie.chatstreams.ui.screens.components.CustomButton
-import com.judekwashie.chatstreams.ui.screens.components.CustomTextField
-import com.judekwashie.chatstreams.ui.screens.components.NavigationText
-import com.judekwashie.chatstreams.ui.screens.components.WelcomeText
+import com.judekwashie.chatstreams.ui.components.CustomButton
+import com.judekwashie.chatstreams.ui.components.CustomTextField
+import com.judekwashie.chatstreams.ui.components.NavigationText
+import com.judekwashie.chatstreams.ui.components.WelcomeText
 
 @Composable
 fun SignUpScreen(navController: NavController? = null){

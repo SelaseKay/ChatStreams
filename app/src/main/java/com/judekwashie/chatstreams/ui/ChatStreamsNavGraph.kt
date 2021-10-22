@@ -1,12 +1,12 @@
 package com.judekwashie.chatstreams.ui
 
 import androidx.compose.runtime.Composable
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.judekwashie.chatstreams.ui.screens.SignInScreen
-import com.judekwashie.chatstreams.ui.screens.SignUpScreen
-import com.judekwashie.chatstreams.ui.screens.chat.ChatScreen
+import com.judekwashie.chatstreams.ui.chat.ChatScreen
+import com.judekwashie.chatstreams.ui.chat.ChatViewModel
 
 object MainDestinations{
     const val SIGN_UP_ROUTE = "signUp"
@@ -31,7 +31,8 @@ fun ChatStreamsNavGraph(
             SignInScreen(navController = navController)
         }
         composable(MainDestinations.CHAT_ROUTE){
-            ChatScreen()
+            val chatViewModel = hiltViewModel<ChatViewModel>()
+            ChatScreen(chatViewModel)
         }
     }
   

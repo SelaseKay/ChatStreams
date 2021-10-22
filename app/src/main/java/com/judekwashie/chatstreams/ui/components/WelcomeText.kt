@@ -1,4 +1,4 @@
-package com.judekwashie.chatstreams.ui.screens.components
+package com.judekwashie.chatstreams.ui.components
 
 import android.graphics.Color.parseColor
 import androidx.compose.foundation.layout.padding
